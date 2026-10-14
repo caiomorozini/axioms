@@ -1,0 +1,1 @@
+A ideia é escrever um resumo com as minhas próprias palavras, destacando os pontos mais importantes e conceitos-chave abordados nos livros, documentações e artigos. O objetivo é consolidar o conhecimento adquirido e facilitar a revisão futura.
