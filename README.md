@@ -2,3 +2,18 @@ A ideia é escrever um resumo com as minhas próprias palavras, destacando os po
 
 Dado o mundo que nos encontramos, onde os modelos de linguagem estão cada vez mais sendo utilizados, torna-se vital gerar uma base de conhecimento consistente e confiável.
 Além disso, a prática de escrever resumos ajuda a desenvolver habilidades de síntese e comunicação, permitindo que eu compartilhe informações de forma clara e concisa com outras pessoas.
+
+## Abrir no Obsidian
+
+Este repositório contém notas em Markdown e foi organizado para ser usado com o Obsidian.
+
+1. Clone o repositório.
+2. No Obsidian, escolha **Abrir pasta como vault** e selecione a pasta raiz `axioms`.
+3. Use o ícone de grafo na barra lateral ou a paleta de comandos para abrir a visualização do grafo.
+
+A pasta `.obsidian` inclui preferências e a configuração dos plugins centrais, incluindo o grafo. Não é necessário instalar plugins comunitários para abrir as notas. Os arquivos continuam sendo Markdown e também podem ser lidos em outros editores.
+
+## Grafo de notas
+
+![Grafo de notas](graph.png)
+O Obsidian monta o grafo a partir dos links entre as notas, como `[[nome da nota]]`. O arquivo `.obsidian/graph.json` guarda preferências de visualização do grafo; ele não contém uma captura de tela. Para incluir uma imagem do mapa atual, adicione uma captura PNG ao repositório e incorpore-a aqui.

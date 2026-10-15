@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "2e3225130c0b9239",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb3ab92e207d116c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c2f10a3dc6146fb1",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6712b52226abf403",
+    "type": "split",
+    "children": [
+      {
+        "id": "492d28a722eff97d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dfc6bb2a637e1640",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "b8f0d3f616f93873",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "8ab070e080a7315e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3a6f1f6bcfdd8f15",
+    "type": "split",
+    "children": [
+      {
+        "id": "37bcfe3c7502031f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "76c5e0097633b5f1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "2001ca27cdc6ddde",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "a79d8b01b3614e44",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "764f0c75e17abd2c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "c2f10a3dc6146fb1",
+  "lastOpenFiles": [
+    "graph.png",
+    "graph_example.png",
+    "image.png",
+    "books/design-data-intensive-applications/Chapter.1/Trade Offs.md",
+    "books/design-data-intensive-applications/README.md",
+    "books/design-data-intensive-applications/Prefácio.md",
+    "books/design-data-intensive-applications/capa.jpeg",
+    "books/design-data-intensive-applications/Chapter.1/Operational Versus Analytical Systems.md",
+    "books/design-data-intensive-applications/Chapter.1/Distributed Versus Single-Node Systems.md",
+    "books/design-data-intensive-applications/Chapter.1/Data Systems, Law, and Society.md",
+    "books/design-data-intensive-applications/Chapter.1/Cloud Versus Self-Hosting.md"
+  ]
+}
