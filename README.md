@@ -16,4 +16,4 @@ A pasta `.obsidian` inclui preferências e a configuração dos plugins centrais
 ## Grafo de notas
 
 ![Grafo de notas](graph.png)
-O Obsidian monta o grafo a partir dos links entre as notas, como `[[nome da nota]]`. O arquivo `.obsidian/graph.json` guarda preferências de visualização do grafo; ele não contém uma captura de tela. Para incluir uma imagem do mapa atual, adicione uma captura PNG ao repositório e incorpore-a aqui.
+O Obsidian monta o grafo a partir dos links entre as notas, como `[[nome da nota]]`. O arquivo `.obsidian/graph.json` guarda as preferências visuais e os grupos de cor. Atualmente, as notas em `books/design-data-intensive-applications/Chapter.1` recebem a mesma cor, identificando-as como parte do capítulo 1. Esse grupo altera a cor dos nós, mas não fixa sua posição nem cria uma região separada no grafo.
