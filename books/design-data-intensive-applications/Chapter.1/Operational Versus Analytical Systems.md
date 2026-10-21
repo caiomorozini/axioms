@@ -1,3 +1,5 @@
+# Sistemas operacionais e sistemas analíticos
+
 Achei esse assunto muito interessante, pois ele converge bastante com a minha experiência profissional. Ao longo da minha trajetória, tive dificuldade para compreender essa divisão: atuei com ciência de dados durante a iniciação científica na faculdade, depois trabalhei com backend e, mais tarde, com sistemas analíticos. Quando entrei no mundo analítico, passei a enxergar os dados de outra forma, mas nunca consegui me adaptar completamente a esse distanciamento em relação ao backend. Toda a infraestrutura que construímos para dar suporte ao ambiente de big data seguia muitos dos princípios discutidos neste capítulo. Outro ponto importante é que essa etapa não envolve apenas complexidade de implementação, mas também — e sobretudo — complexidade de decisão. Escolher uma arquitetura adequada ao problema que se deseja resolver é crucial para o sucesso do projeto.
 
 Os conceitos se misturam, o que muda aqui é a forma com os dados são utilizados e quem são os usuários finais. Em sistemas operacionais, o foco é em transações rápidas e consistentes, enquanto em sistemas analíticos, o foco é em consultas complexas e análise de grandes volumes de dados.
@@ -23,3 +25,37 @@ Conforme esses sistemas se tornaram maduros, surgiram também dois novos profiss
 - Engenheiros analíticos: modelam e transformam dados para tornar os dados mais úteis para análise. Eles trabalham em estreita colaboração com analistas de dados e cientistas de dados para garantir que os dados estejam estruturados de forma a facilitar a análise e a geração de insights.
 
 Esse livro cobre todas essas áreas pois ambos tem papéis importantes no ciclo de vida do dado e é importante ter essa visão macro para trabalhar melhor com colegas que atuam do outro lado dessa divisão.
+
+## Caracterizando [[processamento transacional]] e analítico
+
+Nos primeiros anos dos processos envolvendo processamento de dados, escrever em um banco de dados tipicamente estava relacionado à uma transação comercial: fazer uma venda, fazer um pedido para um fornecedor, pagar o salário de um funcionário, etc. Hoje as bases de dados não necessáriamente envolvem transações financeiras porém o nome acabou ficando mas o seu significado sim: **[[processamento transacional]] refere-se à um grupo de leitura e escrita que forma uma unidade lógica**
+
+> No capítulo 8 esse mesmo termos erá utilizado para se referir a leituras e escritas de baixa latência.
+
+Esses termos podem parecer bem confusos, ainda mais nos dias atuais onde bancos de dados são utilizados para posts em redes sociais, movimento em jogos e vários outros casos, o padrão básico para acessa-los é similar ao processamento transacional:
+
+Um sistema operacional olha para um pequeno número de registros selecionados por uma chave ([[point query]]) e registros são inseridos, atualizados ou deletados com base no input do usuário. As aplicações por essencia serem interativas, esse padrão de acesso ficou conhecido como transação online ([[OLTP]] - [[Online Transaction processing]]).
+
+O lado analítico também começou a crescer bastante porém a visão e o acesso mudam um pouco nesse caso. Normalmente, uma query analítica irá ler um grande número de registros e calcular estatíticas de agregação (como soma, contagem ou média) ao invés de retornar um registro individual parra o usuário (como um sistema operacional faz).
+Por exemplo, um analista em uma cadeia de supermercados quer responder perguntas como:
+
+- Qual foi o total de vendas de cada uma das lojas em janeiro?
+- Quantas bananas além do usual vendemos desde a última promoção?
+- Qual marca de comida de bebês é mais comum de ser vendida junto com a marca X de fraldas?
+
+O report gerado por esses resultados são tipos de queries muito relevantes para um BI, ajudando a gestão/executivos na tomada de decisão. Para diferenciar o uso dos bancos de dados é chamado de processamento analítico online ([[OLAP]] - [[Online Analytical Processing]])
+
+Propriedade | OLTP | OLAP
+---|---|---
+Padrão de leitura | Point queries (acessar registros individuais por chaves) | Agregamento de um número grande de registros
+Padrão de escrita | Insere, atualiza e deleta registros individuais | [[Bulking]] (ETL) ou event stream
+Uso de exemplo humano | Usuário final de uma aplicação web ou mobile | Analistas para apoio de tomada de decisão
+Caso de uso para máquinas | Checar se a ação está autorizada | Detectar fraude/abuso
+Volume | Muitas queries pequenas | Poucas queries mas com muita complexidade
+Representatividade do dado | Último estado do dado (atual na linha do tempo) | Dado histórico
+Tamanho do dataset | Giga a Terabytes | Tera até pentabytes
+
+> O significado do **online** em OLAP não é claro, provavelmente indica que a query não é apenas para reports pré-definidos e que analistas usam o sistema interativamente com queries de exploração.
+
+
+A partir dessa classificação, podemos discutir como corporações reais se comportam pensando até mesmo em governança. Os acessos às bases de dados para as equipes de dados costumam ser bem mais flexiveis dado a natureza e a necessidade, mas deixar usuários interagirem com bases de dados com liberdade é um risco muito grande dado que queries podem potencialmente ler e alterar os registros. Além disso, podem executar queries com custo de processamento elevado impactando o desempenho do banco de dados para outros usuários. Por essa razão, as queries construídas para sistemas OLTP são fixas e sem muitas costumizações e são utilizadas ocasionalmente para manutenção e troubleshooting. Por ouitro lado, é comum que bancos de dados analíticos deem acesso aos usuários a liberdade de escrever queries arbitrárias ou gerar queries automaticamente usando ferramentas de visualização de dados ou dashboards como Tableau, Looker ou Power BI.
