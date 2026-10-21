@@ -30,13 +30,13 @@ Esse livro cobre todas essas áreas pois ambos tem papéis importantes no ciclo 
 
 Nos primeiros anos dos processos envolvendo processamento de dados, escrever em um banco de dados tipicamente estava relacionado à uma transação comercial: fazer uma venda, fazer um pedido para um fornecedor, pagar o salário de um funcionário, etc. Hoje as bases de dados não necessáriamente envolvem transações financeiras porém o nome acabou ficando mas o seu significado sim: **[[processamento transacional]] refere-se à um grupo de leitura e escrita que forma uma unidade lógica**
 
-> No capítulo 8 esse mesmo termos erá utilizado para se referir a leituras e escritas de baixa latência.
+> No capítulo 8 esse mesmo termos será utilizado para se referir a leituras e escritas de baixa latência.
 
 Esses termos podem parecer bem confusos, ainda mais nos dias atuais onde bancos de dados são utilizados para posts em redes sociais, movimento em jogos e vários outros casos, o padrão básico para acessa-los é similar ao processamento transacional:
 
 Um sistema operacional olha para um pequeno número de registros selecionados por uma chave ([[point query]]) e registros são inseridos, atualizados ou deletados com base no input do usuário. As aplicações por essencia serem interativas, esse padrão de acesso ficou conhecido como transação online ([[OLTP]] - [[Online Transaction processing]]).
 
-O lado analítico também começou a crescer bastante porém a visão e o acesso mudam um pouco nesse caso. Normalmente, uma query analítica irá ler um grande número de registros e calcular estatíticas de agregação (como soma, contagem ou média) ao invés de retornar um registro individual parra o usuário (como um sistema operacional faz).
+O lado analítico também começou a crescer bastante porém a visão e o acesso mudam um pouco nesse caso. Normalmente, uma query analítica irá ler um grande número de registros e calcular estatíticas de agregação (como soma, contagem ou média) ao invés de retornar um registro individual para o usuário (como um sistema operacional faz).
 Por exemplo, um analista em uma cadeia de supermercados quer responder perguntas como:
 
 - Qual foi o total de vendas de cada uma das lojas em janeiro?
