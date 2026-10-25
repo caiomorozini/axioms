@@ -59,3 +59,17 @@ Tamanho do dataset | Giga a Terabytes | Tera até pentabytes
 
 
 A partir dessa classificação, podemos discutir como corporações reais se comportam pensando até mesmo em governança. Os acessos às bases de dados para as equipes de dados costumam ser bem mais flexiveis dado a natureza e a necessidade, mas deixar usuários interagirem com bases de dados com liberdade é um risco muito grande dado que queries podem potencialmente ler e alterar os registros. Além disso, podem executar queries com custo de processamento elevado impactando o desempenho do banco de dados para outros usuários. Por essa razão, as queries construídas para sistemas OLTP são fixas e sem muitas costumizações e são utilizadas ocasionalmente para manutenção e troubleshooting. Por ouitro lado, é comum que bancos de dados analíticos deem acesso aos usuários a liberdade de escrever queries arbitrárias ou gerar queries automaticamente usando ferramentas de visualização de dados ou dashboards como Tableau, Looker ou Power BI.
+
+
+## Data Warehousing
+
+[[Data warehouse]] como o nome já diz, são bancos de dados onde a finalidade são consultas analíticas. Antes da existencia dessa divisão, os bancos OLTP eram utilizados para ambos os propósitos.
+Pela natureza da forma como os ambientes analíticos são utilizados pelos analistas e cientistas, há razões para essa separação:
+
+- Os dados de interesse podem estar espalhados por multiplos sistemas, tornando difícil combinar os datasets em uma única query.
+> Casa diretamente com uma situação que esbarrei recentemente. Para sistemas operacionais, os serviços estão distribuídos em [[microserviços]] e há uma separação de domínio de aplicativos tanto para as APIs quanto para os bancos de dados (pensando até mesmo em [[kubernets]], onde há uma separação de rede entre esses domínios). Se voc6e precisa de alguma informação que pertence a outro domínio, o ideal nesse caso é os mantenedores do domínio fornecerem uma interface que irá prover essa informação. Nem sempre isso será atendido e muito menos você terá acesso à essas tabelas pois são as mesmas que os sistemas utilizam para as atividades transacionais.
+- Os schemas e os layouts que são bons para OLTP não são ideais para sistemas analíticos (ver [[Stars and Snowflakes: Schemas for Analytics]])
+- Queries analíticas podem ser muito caras e rodar em cima de tabelas OLTP podem causar impacto na performance para outros usuários.
+- Sistemas OLTP podem estar localizadas em redes separadas que os usuários não tem permissão para acesso direto (por seguraça ou motivos de compliance).
+
+Como contraste, um data warehouse permite realizar diferentes operações sem precisar se preocupar com essas questões. Mais para frente, será mostrado também que muita das vezes os dados são armazenados de formas diferentes por questões de otimização por conta dos tipos de queries que são executadas. ([[Chapter.4]]).
