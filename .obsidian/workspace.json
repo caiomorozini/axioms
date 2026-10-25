@@ -11,10 +11,14 @@
             "id": "c2f10a3dc6146fb1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "books/design-data-intensive-applications/Prefácio.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Prefácio"
             }
           }
         ]
@@ -167,26 +171,29 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "dfc6bb2a637e1640",
+  "active": "c2f10a3dc6146fb1",
   "lastOpenFiles": [
-    "books/design-data-intensive-applications/Chapter 01/README.md",
-    "books/design-data-intensive-applications/Chapter 01/Trade Offs.md",
+    "books/design-data-intensive-applications/capa.png",
+    "books/design-data-intensive-applications/capa.jpeg",
+    "books/design-data-intensive-applications/Imagem colada.png",
+    "books/design-data-intensive-applications/Prefácio.md",
     "books/design-data-intensive-applications/Chapter 01/Operational Versus Analytical Systems.md",
-    "books/design-data-intensive-applications/Chapter 01/Distributed Versus Single-Node Systems.md",
-    "books/design-data-intensive-applications/Chapter 01/Data Systems, Law, and Society.md",
+    "books/design-data-intensive-applications/Chapter 01/Trade Offs.md",
+    "books/design-data-intensive-applications/Chapter 01/README.md",
+    "books/design-data-intensive-applications/README.md",
     "books/design-data-intensive-applications/Chapter 01/Cloud Versus Self-Hosting.md",
+    "books/design-data-intensive-applications/Chapter 01/Data Systems, Law, and Society.md",
+    "books/design-data-intensive-applications/Chapter 01/Distributed Versus Single-Node Systems.md",
+    "OLAP.md",
+    "graph.png",
+    "books/design-data-intensive-applications/Chapter.1/Operational Versus Analytical Systems.md",
     "books/design-data-intensive-applications/Chapter 01",
     "books/design-data-intensive-applications/Chapter.1/Trade Offs.md",
-    "books/design-data-intensive-applications/Prefácio.md",
     "formal methos and randomized testing.md",
     "books/design-data-intensive-applications/Chapter.1/README.md",
     "books/design-data-intensive-applications/Chapter.1/Cloud Versus Self-Hosting.md",
-    "graph.png",
     "image.png",
     "graph_example.png",
-    "books/design-data-intensive-applications/README.md",
-    "books/design-data-intensive-applications/capa.jpeg",
-    "books/design-data-intensive-applications/Chapter.1/Operational Versus Analytical Systems.md",
     "books/design-data-intensive-applications/Chapter.1/Distributed Versus Single-Node Systems.md",
     "books/design-data-intensive-applications/Chapter.1/Data Systems, Law, and Society.md"
   ]
