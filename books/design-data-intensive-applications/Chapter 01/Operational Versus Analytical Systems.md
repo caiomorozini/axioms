@@ -73,7 +73,11 @@ Pela natureza da forma como os ambientes analíticos são utilizados pelos anali
 - Sistemas OLTP podem estar localizadas em redes separadas que os usuários não tem permissão para acesso direto (por seguraça ou motivos de compliance).
 
 Como contraste, um data warehouse permite realizar diferentes operações sem precisar se preocupar com essas questões. Mais para frente, será mostrado também que muitas vezes os dados são armazenados de formas diferentes por questões de otimização, por conta dos tipos de queries que são executadas ([[Chapter 04]]).
+Dessa forma faz sentido pensar que os data warehouses são cópias com acesso apenas de leitura de dados de vários sistemas OLTP. Dados são extraídos de tabelas OLTP, transformados em schemas mais amigáveis para análises, limpos e então carregados nos data warehouses. Esse processo de extrair, transformar e carregar é chamado de [[ETL]]. 
+> Nem sempre essa é a ordem, por exemplo: podemos carregar antes de transformar [[ELT]]
 
+![[etl.png]]
+Aqui o livro vai citar algumas ferramentas como [FiveTran](https://www.fivetran.com/), [Singer](https://www.singer.io/) e [Airbyte](https://airbyte.com/) que são serviços utilizados para conectar sistemas com warehouses. Confesso que nunca tinha ouvido falar (talvez o Airbyte, e diferente do livro eu quero me aprofundar nessas tecnologias. Por isso vou separar uma seção de pesquisa e teste para algumas das ferramentas que o livro for citando).
 ## Em poucas palavras
 
 OLTP atende às operações da aplicação com leituras e escritas pontuais sobre o estado atual dos dados. OLAP atende à exploração e análise de grandes volumes, normalmente históricos. Separar os ambientes ajuda a evitar que consultas analíticas pesadas prejudiquem a operação e permite organizar os dados para os padrões de acesso de cada finalidade.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "books/design-data-intensive-applications/Prefácio.md",
+                "file": "books/design-data-intensive-applications/Chapter 01/Cloud Versus Self-Hosting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prefácio"
+              "title": "Cloud Versus Self-Hosting"
             }
           }
         ]
@@ -171,19 +171,23 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "c2f10a3dc6146fb1",
+  "active": "dfc6bb2a637e1640",
   "lastOpenFiles": [
-    "books/design-data-intensive-applications/capa.png",
-    "books/design-data-intensive-applications/capa.jpeg",
-    "books/design-data-intensive-applications/Imagem colada.png",
-    "books/design-data-intensive-applications/Prefácio.md",
     "books/design-data-intensive-applications/Chapter 01/Operational Versus Analytical Systems.md",
-    "books/design-data-intensive-applications/Chapter 01/Trade Offs.md",
+    "books/design-data-intensive-applications/Chapter 01/Sem título",
     "books/design-data-intensive-applications/Chapter 01/README.md",
-    "books/design-data-intensive-applications/README.md",
-    "books/design-data-intensive-applications/Chapter 01/Cloud Versus Self-Hosting.md",
     "books/design-data-intensive-applications/Chapter 01/Data Systems, Law, and Society.md",
     "books/design-data-intensive-applications/Chapter 01/Distributed Versus Single-Node Systems.md",
+    "books/design-data-intensive-applications/Chapter 01/Trade Offs.md",
+    "books/design-data-intensive-applications/README.md",
+    "books/design-data-intensive-applications/Prefácio.md",
+    "books/design-data-intensive-applications/capa.png",
+    "books/design-data-intensive-applications/Chapter 01/Cloud Versus Self-Hosting.md",
+    "books/design-data-intensive-applications/Chapter 01/images/etl.png",
+    "books/design-data-intensive-applications/Chapter 01/images/Imagem colada.png",
+    "books/design-data-intensive-applications/Chapter 01/images",
+    "books/design-data-intensive-applications/capa.jpeg",
+    "books/design-data-intensive-applications/Imagem colada.png",
     "OLAP.md",
     "graph.png",
     "books/design-data-intensive-applications/Chapter.1/Operational Versus Analytical Systems.md",
