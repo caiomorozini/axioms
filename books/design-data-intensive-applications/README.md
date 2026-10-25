@@ -1,6 +1,6 @@
 # Designing Data-Intensive Applications (Edição 2)
 
-![Capa do livro Designing Data-Intensive Applications](capa.jpeg)
+![Capa do livro Designing Data-Intensive Applications](capa.png)
 
 As notas acompanham a organização do livro: cada capítulo tem sua própria pasta, com um índice para os tópicos e as anotações correspondentes. Os títulos seguem, quando possível, os termos da edição em inglês; os resumos e comentários pessoais são escritos em português.
 
