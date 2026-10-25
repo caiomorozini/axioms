@@ -8,10 +8,10 @@ Apesar das diferentes e diversas tecnologias surgirem, os **fundamentos** perman
 
 ## O que mudou na segunda edição
 
-A primeira versão foi publicada em 2017 e muita coisa mudou desde então. consequentemente, o livro precisou ser revisado para refletir as mudanças no cenário de desenvolvimento de software. A maior mudança tecnológica como todos sabemos é a explosão no interesse por [[artificial inteligence]] e a ascenção de [[cloud native data systems architectures]].
+A primeira versão foi publicada em 2017 e muita coisa mudou desde então. consequentemente, o livro precisou ser revisado para refletir as mudanças no cenário de desenvolvimento de software. A maior mudança tecnológica como todos sabemos é a explosão no interesse por [[artificial intelligence]] e a ascenção de [[cloud native data systems architectures]].
 
 > While this book is not about AI per se, we have added coverage of data systems that support AI and machine learning, including vector indexes (used for semantic search), DataFrames (used for training datasets), and batch processing systems for preparing large amounts of training data
 
-Também foi adicionado algumas discussões a respeito de algumas tecnologias ([[sync engines and local-first software]], [[workflow engines and durable execution]], [[formal methos and randomized testing]], [[GraphQL]])
+Também foram adicionadas discussões a respeito de algumas tecnologias ([[sync engines and local-first software]], [[workflow engines and durable execution]], [[formal methods and randomized testing]], [[GraphQL]]).
 
 O que eu achei curioso foi que ele removeu o MapReduce pois agora está obsoleto e não é mais utilizado.

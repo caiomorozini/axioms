@@ -13,7 +13,12 @@ Este repositório contém notas em Markdown e foi organizado para ser usado com 
 
 A pasta `.obsidian` inclui preferências e a configuração dos plugins centrais, incluindo o grafo. Não é necessário instalar plugins comunitários para abrir as notas. Os arquivos continuam sendo Markdown e também podem ser lidos em outros editores.
 
+## Navegação
+
+- [[books/design-data-intensive-applications/README|Designing Data-Intensive Applications]]
+- [[books/design-data-intensive-applications/Prefácio|Prefácio]]
+
 ## Grafo de notas
 
 ![Grafo de notas](graph.png)
-O Obsidian monta o grafo a partir dos links entre as notas, como `[[nome da nota]]`. O arquivo `.obsidian/graph.json` guarda as preferências visuais e os grupos de cor. Atualmente, as notas em `books/design-data-intensive-applications/Chapter.1` recebem a mesma cor, identificando-as como parte do capítulo 1. Esse grupo altera a cor dos nós, mas não fixa sua posição nem cria uma região separada no grafo.
+O Obsidian monta o grafo a partir dos links entre as notas, como `[[nome da nota]]`. O arquivo `.obsidian/graph.json` guarda as preferências visuais e os grupos de cor. Atualmente, as notas em `books/design-data-intensive-applications/Chapter 01` recebem a mesma cor, identificando-as como parte do capítulo 1. Esse grupo altera a cor dos nós, mas não fixa sua posição nem cria uma região separada no grafo.

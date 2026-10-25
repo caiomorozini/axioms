@@ -1,9 +1,12 @@
 # Designing Data-Intensive Applications (Edição 2)
 
-
 ![Capa do livro Designing Data-Intensive Applications](capa.jpeg)
----
-As anotações serão dividas entre os capítulos do livro utilizando pastas. Ainda não sei como será a organização final pois irei ajustando conforme for avançando na leitura. A ideia é que cada capítulo tenha uma pasta com os arquivos de anotações, resumos e exemplos de código.
 
-Alguns conceitos posso acabar incrementando por conta de experiências próprias ou mesmo por já ter lido a edição 1.
-O livro só tem a versão em inglês, ainda não sei se irei traduzir todos os resumos.
+As notas acompanham a organização do livro: cada capítulo tem sua própria pasta, com um índice para os tópicos e as anotações correspondentes. Os títulos seguem, quando possível, os termos da edição em inglês; os resumos e comentários pessoais são escritos em português.
+
+## Navegação
+
+- [[Prefácio]]
+- [[Chapter 01/README|Capítulo 1 — Reliable, Scalable, and Maintainable Applications]]
+
+As notas de conceitos ainda não desenvolvidas podem aparecer como links sem destino. Eles são referências para aprofundar ou criar notas próprias quando isso for útil, não uma exigência de completar o vault.

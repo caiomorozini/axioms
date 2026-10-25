@@ -9,7 +9,7 @@ Chamamos de [[data-intensive]] se o gerenciamento de dados é o desafio principa
 
 Os blocos de construção são sempre os mesmos e incluem:
 
-- Guardar dados para serem acessados pela própria aplicação ou por outras aplicações.([[Bancos da dados]])
+- Guardar dados para serem acessados pela própria aplicação ou por outras aplicações ([[Bancos de dados]]).
 - Lembrar do resultado de operações muito custosas para acelerar a leitura ([[caches]])
 - Permitir usuários buscarem dados por uma palavra chave ou filtrar de várias formas ([[indexação]])
 - Lidar com eventos e alterações de dados em tempo real ([[streaming]])

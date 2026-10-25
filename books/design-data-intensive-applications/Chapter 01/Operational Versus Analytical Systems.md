@@ -48,7 +48,7 @@ O report gerado por esses resultados são tipos de queries muito relevantes para
 Propriedade | OLTP | OLAP
 ---|---|---
 Padrão de leitura | Point queries (acessar registros individuais por chaves) | Agregamento de um número grande de registros
-Padrão de escrita | Insere, atualiza e deleta registros individuais | [[Bulking]] (ETL) ou event stream
+Padrão de escrita | Insere, atualiza e deleta registros individuais | [[bulk loading]] (ETL) ou event stream
 Uso de exemplo humano | Usuário final de uma aplicação web ou mobile | Analistas para apoio de tomada de decisão
 Caso de uso para máquinas | Checar se a ação está autorizada | Detectar fraude/abuso
 Volume | Muitas queries pequenas | Poucas queries mas com muita complexidade
@@ -67,9 +67,19 @@ A partir dessa classificação, podemos discutir como corporações reais se com
 Pela natureza da forma como os ambientes analíticos são utilizados pelos analistas e cientistas, há razões para essa separação:
 
 - Os dados de interesse podem estar espalhados por multiplos sistemas, tornando difícil combinar os datasets em uma única query.
-> Casa diretamente com uma situação que esbarrei recentemente. Para sistemas operacionais, os serviços estão distribuídos em [[microserviços]] e há uma separação de domínio de aplicativos tanto para as APIs quanto para os bancos de dados (pensando até mesmo em [[kubernets]], onde há uma separação de rede entre esses domínios). Se voc6e precisa de alguma informação que pertence a outro domínio, o ideal nesse caso é os mantenedores do domínio fornecerem uma interface que irá prover essa informação. Nem sempre isso será atendido e muito menos você terá acesso à essas tabelas pois são as mesmas que os sistemas utilizam para as atividades transacionais.
+> Casa diretamente com uma situação que esbarrei recentemente. Para sistemas operacionais, os serviços estão distribuídos em [[microserviços]] e há uma separação de domínio de aplicativos tanto para as APIs quanto para os bancos de dados (pensando até mesmo em [[Kubernetes]], onde há uma separação de rede entre esses domínios). Se você precisa de alguma informação que pertence a outro domínio, o ideal nesse caso é os mantenedores do domínio fornecerem uma interface que irá prover essa informação. Nem sempre isso será atendido e muito menos você terá acesso a essas tabelas, pois são as mesmas que os sistemas utilizam para as atividades transacionais.
 - Os schemas e os layouts que são bons para OLTP não são ideais para sistemas analíticos (ver [[Stars and Snowflakes: Schemas for Analytics]])
 - Queries analíticas podem ser muito caras e rodar em cima de tabelas OLTP podem causar impacto na performance para outros usuários.
 - Sistemas OLTP podem estar localizadas em redes separadas que os usuários não tem permissão para acesso direto (por seguraça ou motivos de compliance).
 
-Como contraste, um data warehouse permite realizar diferentes operações sem precisar se preocupar com essas questões. Mais para frente, será mostrado também que muita das vezes os dados são armazenados de formas diferentes por questões de otimização por conta dos tipos de queries que são executadas. ([[Chapter.4]]).
+Como contraste, um data warehouse permite realizar diferentes operações sem precisar se preocupar com essas questões. Mais para frente, será mostrado também que muitas vezes os dados são armazenados de formas diferentes por questões de otimização, por conta dos tipos de queries que são executadas ([[Chapter 04]]).
+
+## Em poucas palavras
+
+OLTP atende às operações da aplicação com leituras e escritas pontuais sobre o estado atual dos dados. OLAP atende à exploração e análise de grandes volumes, normalmente históricos. Separar os ambientes ajuda a evitar que consultas analíticas pesadas prejudiquem a operação e permite organizar os dados para os padrões de acesso de cada finalidade.
+
+## Perguntas para revisão
+
+- Como diferem os padrões de leitura e escrita de OLTP e OLAP?
+- Por que consultas analíticas costumam ser executadas em um data warehouse, em vez de diretamente nos bancos OLTP?
+- Que necessidades de governança, segurança e desempenho essa separação ajuda a atender?

@@ -8,7 +8,7 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:books/design-data-intensive-applications/Chapter.1  ",
+      "query": "path:\"books/design-data-intensive-applications/Chapter 01\"",
       "color": {
         "a": 1,
         "rgb": 14701138
