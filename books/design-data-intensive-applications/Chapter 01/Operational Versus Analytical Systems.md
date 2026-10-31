@@ -79,6 +79,19 @@ Dessa forma faz sentido pensar que os data warehouses são cópias com acesso ap
 ![etl](images/etl.png)
 
 Aqui o livro vai citar algumas ferramentas como [[FiveTran]], [[Singer]] e [[Airbyte]] que são serviços utilizados para conectar sistemas com warehouses. Confesso que nunca tinha ouvido falar (talvez o Airbyte, e diferente do livro eu quero me aprofundar nessas tecnologias. Por isso vou separar uma seção de pesquisa e teste para algumas das ferramentas que o livro for citando).
+
+
+### HTAP
+Significa Hybrid transactional/analytical processing. A ideia é um sistema que permite um OLTP e OLAP em um único sistrema sem precisar de um ETL de um sistema para o outro. Internamente, acaba que esses sistemas são OLTPs com alguns sistemas analíticos que escondem por trás uma interface em comum. Apesar do HTAP existir, não acho uma boa prática manter esses 2 mundos unidos até por questões de objetivos distintos.
+
+### Do data warehouse para o datalake
+
+Data warehouses geralmente usam modelos de dados relacionais que são consultados através de SQL, em alguns casos ferramentas de BI. Dependendo do problema, isso se encaixa muito bem... eu particulamente não acho interessante por exemplo para situações onde precisaria transformar os dados de forma a treinar um modelo de machine learning. Esse tipo de processo geralmente vai exigir transformar as linhas e colunas em features. Bibliotecas como pandas e scikit-learn se tornaram populares entre os cientistas de dados justamente por permitir certa flexibilidade.
+
+Dado esse cenário, torna-se interessante a estratégia dos datalakes (repositórios de dados centalizados que guardam uma cópia de qualquer dado que seja útil para análise obtido de sistemas operacionais por meio de ETLs). A diferença entre o data warehouse é que um datalake simplesmente contém arquivos sem impor nenhum formato específico, modelo ou schema (além disso, é muito mais barato!).
+
+
+
 ## Em poucas palavras
 
 OLTP atende às operações da aplicação com leituras e escritas pontuais sobre o estado atual dos dados. OLAP atende à exploração e análise de grandes volumes, normalmente históricos. Separar os ambientes ajuda a evitar que consultas analíticas pesadas prejudiquem a operação e permite organizar os dados para os padrões de acesso de cada finalidade.
