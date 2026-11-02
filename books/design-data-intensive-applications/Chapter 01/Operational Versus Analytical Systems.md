@@ -90,14 +90,10 @@ Data warehouses geralmente usam modelos de dados relacionais que são consultado
 
 Dado esse cenário, torna-se interessante a estratégia dos datalakes (repositórios de dados centalizados que guardam uma cópia de qualquer dado que seja útil para análise obtido de sistemas operacionais por meio de ETLs). A diferença entre o data warehouse é que um datalake simplesmente contém arquivos sem impor nenhum formato específico, modelo ou schema (além disso, é muito mais barato!).
 
+### Considerações Finais
 
+A disponibilidade dos dados atualmente não se limita através de arquivos (datalakes) ou tabelas relacionais (data warehouses) mas também através de streams de eventos. A ideia é que os dados são produzidos por sistemas operacionais e consumidos por sistemas analíticos. A diferença é que os dados podem ser consumidos em tempo real, sem a necessidade de esperar o processo de ETL. Isso é muito útil para casos onde a análise precisa ser feita em tempo real, como detecção de fraude ou monitoramento de sistemas.
 
-## Em poucas palavras
+Além disso, o livro irá fazer uma distinção entre "System of Record" e "Derived data systems". O primeiro é o sistema que contém os dados originais, enquanto o segundo é um sistema que contém dados derivados de outros sistemas. Por exemplo, um data warehouse é um sistema de dados derivados, enquanto um banco de dados OLTP é um sistema de registro. Dados derivados são reduntantes (no sentido de que são cópias de dados originais) e normalmente sistemas analíticos são Derived Data Systems.
 
-OLTP atende às operações da aplicação com leituras e escritas pontuais sobre o estado atual dos dados. OLAP atende à exploração e análise de grandes volumes, normalmente históricos. Separar os ambientes ajuda a evitar que consultas analíticas pesadas prejudiquem a operação e permite organizar os dados para os padrões de acesso de cada finalidade.
-
-## Perguntas para revisão
-
-- Como diferem os padrões de leitura e escrita de OLTP e OLAP?
-- Por que consultas analíticas costumam ser executadas em um data warehouse, em vez de diretamente nos bancos OLTP?
-- Que necessidades de governança, segurança e desempenho essa separação ajuda a atender?
+> Most databases, storage engines, and query languages are not inherently systems of record or derived systems. A database is just a tool; how you use it is up to you. The distinction between a system of record and a derived data system depends not on the tool, but on the way you use it in your application. By being clear about which data is derived from which other data, you can bring clarity to an otherwise confusing system architecture.
